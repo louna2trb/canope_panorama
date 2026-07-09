@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="pannellum.css"/>
+  <script src="pannellum.js"></script>
+  <style>html, body, #panorama { width:100%; height:100vh; margin:0; }</style>
+</head>
+<body>
+  <div id="panorama"></div>
+  <script>
+    pannellum.viewer('panorama', {
+      default: {
+        firstScene: 'scene1',
+        sceneFadeDuration: 1000,
+        autoRotate: -2,
+        autoRotateInactivityDelay: 3000
+      },
+      scenes: {
+        scene1: {
+          title: 'Parc de Bercy',
+          panorama: 'scene_1.png',
+          autoLoad: true,
+	        hotSpotDebug: true,
+          hotSpots: [
+            {
+              pitch: -0.03850595036514842,
+              yaw: -15.354472110506933,
+              type: 'scene',
+              sceneId: 'scene2',
+              text: 'Visiter les Gradins',
+            }
+          ]
+        },
+        scene2: {
+          title: 'Gradins',
+          panorama: 'scene_2.png',
+          autoLoad: true,
+	        hotSpotDebug: true,
+          hotSpots: [
+            {
+              pitch: -2.9128707363484505, 
+              yaw: 112.99174066633418,
+              type: 'scene',
+              sceneId: 'scene1',
+              text: 'Retour Parc de Bercy'
+            },
+            {
+              pitch: -6.287834927336148, 
+              yaw: -10.888042075470628,
+              type: 'scene',
+              sceneId: 'scene3',
+              text: 'Aller sur le court'
+            }
+          ]
+        },
+        scene3: {
+          title: 'Court',
+          panorama: 'scene_3.png',
+          autoLoad: true,
+	        hotSpotDebug: true,
+          hotSpots: [
+            {
+              pitch: 0.74629270649432, 
+              yaw: 16.20677123686712,
+              type: 'scene',
+              sceneId: 'scene1',
+              text: 'Retour Parc de Bercy'
+            },
+            {
+              pitch: 2.0959485824432846, 
+              yaw: 46.296995554080574,
+              type: 'scene',
+              sceneId: 'scene2',
+              text: 'Visiter les Gradins'
+            }
+          ]
+        }
+      }
+    }
+  );
+  </script>
+</body>
+</html>
