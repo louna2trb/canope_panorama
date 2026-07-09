@@ -2,7 +2,7 @@
 
 ## Accès à la visite (Github pages):
 
-[Visite Virtuelle]((https://louna2trb.github.io/canope_panorama/) 
+[Visite Virtuelle](https://louna2trb.github.io/canope_panorama/) 
 
 
 ### Setup Local
